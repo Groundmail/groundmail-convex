@@ -1,0 +1,72 @@
+{
+  "name": "@groundmail/convex",
+  "version": "0.1.0",
+  "description": "Convex component for sending transactional email with Groundmail: durable sends, idempotent retries and delivery status from webhooks",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/client/index.js",
+  "types": "./dist/client/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/client/index.d.ts",
+      "default": "./dist/client/index.js"
+    },
+    "./test": "./src/test.ts",
+    "./_generated/component.js": {
+      "types": "./dist/component/_generated/component.d.ts"
+    },
+    "./convex.config": {
+      "types": "./dist/component/convex.config.d.ts",
+      "default": "./dist/component/convex.config.js"
+    },
+    "./convex.config.js": {
+      "types": "./dist/component/convex.config.d.ts",
+      "default": "./dist/component/convex.config.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Groundmail/groundmail-convex.git"
+  },
+  "homepage": "https://docs.groundmail.dev/frameworks/convex",
+  "bugs": {
+    "url": "https://github.com/Groundmail/groundmail-convex/issues"
+  },
+  "keywords": [
+    "convex",
+    "component",
+    "convex-component",
+    "email",
+    "transactional-email",
+    "webhooks",
+    "groundmail"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "convex": "^1.24.0"
+  },
+  "scripts": {
+    "build": "tsc --project ./tsconfig.build.json",
+    "codegen": "CONVEX_AGENT_MODE=anonymous convex dev --once",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p example/convex && vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@edge-runtime/vm": "^5.0.0",
+    "@types/node": "^22.20.5",
+    "convex": "^1.47.0",
+    "convex-test": "^0.0.64",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}
