@@ -10,7 +10,7 @@
 <h1 align="center">Groundmail for Convex</h1>
 
 <p align="center">
-  A <a href="https://www.convex.dev/components">Convex component</a> for sending transactional email with Groundmail.<br>
+  A <a href="https://www.convex.dev/components">Convex component</a> for sending email with Groundmail.<br>
   Durable sends from mutations, idempotent retries, and delivery status from webhooks.
 </p>
 
@@ -27,7 +27,7 @@
 
 ---
 
-[`@groundmail/convex`](https://www.npmjs.com/package/@groundmail/convex) is a [Convex component](https://www.convex.dev/components) for sending transactional email with Groundmail. Call `sendEmail` from a mutation; the component stores the email in your Convex database, sends it in the background, retries temporary failures without ever sending twice, and keeps each email's delivery status current from Groundmail webhooks.
+[`@groundmail/convex`](https://www.npmjs.com/package/@groundmail/convex) is a [Convex component](https://www.convex.dev/components) for sending email with Groundmail. Call `sendEmail` from a mutation; the component stores the email in your Convex database, sends it in the background, retries temporary failures without ever sending twice, and keeps each email's delivery status current from Groundmail webhooks.
 
 - **Durable:** the email is queued in the same transaction as the rest of your mutation. If the mutation fails, nothing is sent.
 - **Idempotent:** pass an `idempotencyKey` and a second send with the same key returns the first email. Every retry to Groundmail carries the same `Idempotency-Key` header.
