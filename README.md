@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://groundmail.dev">
+  <a href="https://groundmail.dev?utm_source=github&utm_medium=readme&utm_campaign=groundmail-convex">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://app.groundmail.dev/images/github/readme-logo-dark.png">
       <img alt="Groundmail" src="https://app.groundmail.dev/images/github/readme-logo-light.png" height="44">
@@ -17,12 +17,13 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/@groundmail/convex"><img alt="npm" src="https://img.shields.io/npm/v/@groundmail/convex?color=a3461f&label=npm"></a>
   <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-b48f62"></a>
+  <a href="https://www.convex.dev/components/groundmail/convex"><img alt="Convex Component" src="https://www.convex.dev/components/badge/groundmail/convex"></a>
 </p>
 
 <p align="center">
-  <a href="https://docs.groundmail.dev/frameworks/convex">Docs</a> ·
-  <a href="https://app.groundmail.dev/signup">Get a free account</a> ·
-  <a href="https://groundmail.dev">groundmail.dev</a>
+  <a href="https://docs.groundmail.dev/frameworks/convex?utm_source=github&utm_medium=readme&utm_campaign=groundmail-convex">Docs</a> ·
+  <a href="https://app.groundmail.dev/signup?utm_source=github&utm_medium=readme&utm_campaign=groundmail-convex">Get a free account</a> ·
+  <a href="https://groundmail.dev?utm_source=github&utm_medium=readme&utm_campaign=groundmail-convex">groundmail.dev</a>
 </p>
 
 ---
@@ -57,7 +58,7 @@ Set your API key on the deployment (create one under **API Keys** in the dashboa
 npx convex env set GROUNDMAIL_API_KEY gm_your_key_here
 ```
 
-The `from` address must be on a domain you have [verified in Groundmail](https://docs.groundmail.dev/domains).
+The `from` address must be on a domain you have [verified in Groundmail](https://docs.groundmail.dev/domains?utm_source=github&utm_medium=readme&utm_campaign=groundmail-convex).
 
 ## 2. Send an email
 
@@ -87,7 +88,7 @@ export const sendWelcome = mutation({
 })
 ```
 
-`sendEmail` returns an id for the email. You can also send a [published template](https://docs.groundmail.dev/templates) with `template: { id, variables }` instead of `html`/`text`, and set `cc`, `bcc`, `replyTo`, `headers`, `attachments`, `scheduledAt`, `category`, `tenant` and `unsubscribe` as in the [send API](https://docs.groundmail.dev/emails).
+`sendEmail` returns an id for the email. You can also send a [published template](https://docs.groundmail.dev/templates?utm_source=github&utm_medium=readme&utm_campaign=groundmail-convex) with `template: { id, variables }` instead of `html`/`text`, and set `cc`, `bcc`, `replyTo`, `headers`, `attachments`, `scheduledAt`, `category`, `tenant` and `unsubscribe` as in the [send API](https://docs.groundmail.dev/emails?utm_source=github&utm_medium=readme&utm_campaign=groundmail-convex).
 
 ### Idempotency
 
@@ -176,7 +177,7 @@ Copy the signing secret (`whsec_…`, shown once) to your deployment:
 npx convex env set GROUNDMAIL_WEBHOOK_SECRET whsec_your_secret
 ```
 
-The handler checks the `Groundmail-Signature` header, rejects requests older than 5 minutes, and updates the email the event belongs to. Events for email your app sent another way are ignored. See [Webhooks](https://docs.groundmail.dev/webhooks) for every event and its fields.
+The handler checks the `Groundmail-Signature` header, rejects requests older than 5 minutes, and updates the email the event belongs to. Events for email your app sent another way are ignored. See [Webhooks](https://docs.groundmail.dev/webhooks?utm_source=github&utm_medium=readme&utm_campaign=groundmail-convex) for every event and its fields.
 
 ### React to events
 
@@ -238,7 +239,7 @@ export default crons
 
 ## Testing
 
-Use a `gm_test_…` key, or send to [simulator addresses](https://docs.groundmail.dev/testing#simulator-addresses) such as `bounce@simulator.groundmail.dev`, to see the whole flow, webhooks included, without delivering anything.
+Use a `gm_test_…` key, or send to [simulator addresses](https://docs.groundmail.dev/testing?utm_source=github&utm_medium=readme&utm_campaign=groundmail-convex#simulator-addresses) such as `bounce@simulator.groundmail.dev`, to see the whole flow, webhooks included, without delivering anything.
 
 To unit-test your own functions with [`convex-test`](https://www.npmjs.com/package/convex-test), register the component:
 
